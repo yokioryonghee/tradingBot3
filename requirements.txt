@@ -1,9 +1,10 @@
 joblib
 lightgbm
 matplotlib
-numpy
+numpy<1.24
 pandas
-pandas_ta
 scikit-learn
 streamlit
 yfinance
+setuptools
+ta

@@ -8,3 +8,5 @@ streamlit
 yfinance
 setuptools
 pandas_ta
+python-3.10
+

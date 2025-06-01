@@ -47,3 +47,12 @@ def fetch_and_save_data_for_ticker(ticker, start_date, end_date,
             return None
 
     return df
+def get_prepared_data(ticker: str, start_date: str, end_date: str) -> pd.DataFrame:
+    """
+    Streamlit 등 외부에서 호출할 수 있도록 데이터 로딩 및 가공을 담당하는 함수
+    """
+    df = fetch_and_save_data_for_ticker(ticker, start_date, end_date)
+    if df is not None and not df.empty:
+        df = df.dropna()
+    return df
+

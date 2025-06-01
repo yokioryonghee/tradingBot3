@@ -7,4 +7,4 @@ scikit-learn
 streamlit
 yfinance
 setuptools
-ta
+pandas_ta

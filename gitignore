@@ -18,3 +18,8 @@ __pycache__/
 
 # VSCode 설정 파일
 .vscode/
+
+venv*/
+.venv*/
+__pycache__/
+.DS_Store

@@ -4,7 +4,7 @@ import yfinance as yf
 import pandas as pd
 import numpy as np
 import os
-from ta.momentum import RSIIndicator
+import pandas_ta as ta
 from config import DATA_PATH, CSV_FILENAME
 
 def fetch_and_save_data_for_ticker(ticker, start_date, end_date,
@@ -35,7 +35,7 @@ def fetch_and_save_data_for_ticker(ticker, start_date, end_date,
                 df.index.name = 'Date'
 
                 # ✅ RSI 계산 (Close 컬럼 기준)
-                df['rsi'] = RSIIndicator(close=df['Close']).rsi()
+                df['rsi'] = ta.rsi(df['Close'])
 
                 df.to_csv(file_path)
                 print(f"데이터를 '{file_path}'에 성공적으로 저장했습니다.")

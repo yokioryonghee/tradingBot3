@@ -46,8 +46,7 @@ The generated trading signals are fed into a robust backtesting engine. This sim
 
 Performance Analysis & Reporting:
 Post-backtesting, a performance analyzer calculates key financial metrics to objectively evaluate the strategy's profitability and risk-adjusted returns.
-<img width="1710" height="1107" alt="Image" src="https://github.com/user-attachments/assets/89b75ced-91d0-4939-ac5a-28ab7b6a76f7" />
-<img width="1710" height="1107" alt="Image" src="https://github.com/user-attachments/assets/0728c886-c070-4ebf-a827-7046c507d808" />
+
 
 Interactive Visualization:
 All results, including portfolio equity curves, trade history, and performance metrics, are presented via a Streamlit web application, offering an interactive and user-friendly interface for analysis.

@@ -1,7 +1,7 @@
 
 https://tradingbot3-aacevydlbvfcxoqpfal5nj.streamlit.app
 
-if you want to try it by yourself, go to tradingbot repo
+if you want to try it by yourself, go to [tradingbot repo](https://github.com/yokioryonghee/trading)
 
 Quantitative Trading Bot with Machine Learning & Interactive Visualization
 Project Overview

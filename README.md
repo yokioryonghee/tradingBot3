@@ -1,6 +1,8 @@
 
 https://tradingbot3-aacevydlbvfcxoqpfal5nj.streamlit.app
 
+if you want to try it by yourself, go to tradingbot repo
+
 Quantitative Trading Bot with Machine Learning & Interactive Visualization
 Project Overview
 This project, tradingBot3, is a comprehensive application designed for developing, backtesting, and visualizing quantitative trading strategies, with a strong emphasis on Machine Learning (ML) for signal generation. It demonstrates a full end-to-end pipeline for algorithmic trading strategy development, from data acquisition and preprocessing to advanced analytical modeling, performance evaluation, and interactive reporting.

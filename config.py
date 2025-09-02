@@ -2,7 +2,7 @@
 
 # 데이터 관련 설정
 STOCK_UNIVERSE = ['SPY','AAPL', 'GOOGL', 'MSFT', 'SOXL', 'NVDA', 'TSLA',  'QQQS', 'TSLQ', 'TSLS', 'BITO','JEPI', 'JEPQ'] # 다양한 종목 포함 (테스트용)
-START_DATE = '2014-01-01' 
+START_DATE = '2018-01-01' 
 END_DATE = '2023-12-31' 
 DATA_PATH = 'data/' # 로컬에서 데이터 저장 시 사용될 폴더
 CSV_FILENAME = "{TICKER}_{START_DATE}_to_{END_DATE}_new.csv"
@@ -29,7 +29,7 @@ ML_MODEL_FEATURE_COLUMNS = [
 
 
 DEFAULT_START_DATE = "2023-01-01"  # 예시
-DEFAULT_END_DATE = "2023-12-31"
+DEFAULT_END_DATE = "2025-05-31"
 RSI_TREND_CONFIRM_LEVEL_BUY = 30
 RSI_TREND_CONFIRM_LEVEL_SELL = 70
 ML_MODEL_FEATURE_COLUMNS = ['close', 'volume', 'rsi', 'macd', 'ema_12', 'ema_26']

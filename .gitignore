@@ -27,3 +27,4 @@ venv*/
 *.pkl
 data/
 ml_model/
+.DS_Store

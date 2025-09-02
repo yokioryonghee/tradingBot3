@@ -22,4 +22,8 @@ __pycache__/
 venv*/
 .venv*/
 __pycache__/
-.DS_Store
+.DS_Store__pycache__/
+venv*/
+*.pkl
+data/
+ml_model/

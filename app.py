@@ -194,7 +194,7 @@ if st.button("2. Train ML Models"):
 # --- 4. 백테스팅 실행 ---
 st.header("4. Run Backtest")
 st.markdown("---")
-pring("working on it. wait please")
+
 strategy_type = st.radio("Select Strategy Type:", ("Rules-Based", "ML-Based"), key="strategy_selector")
 
 if strategy_type == "ML-Based" and ("ml_model_trained" not in st.session_state or not st.session_state.ml_model_trained):

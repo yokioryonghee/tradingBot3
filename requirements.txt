@@ -9,5 +9,5 @@ yfinance
 setuptools
 pandas_ta
 setuptools>=65.5.0
-pandas-ta
+pandas-ta==0.3.14b0
 

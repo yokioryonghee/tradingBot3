@@ -162,3 +162,22 @@ if st.button("1. Prepare Data"):
             st.dataframe(st.session_state.prepared_data.head())
         else:
             st.error("Failed to prepare data. Please check parameters and network connection.")
+ # --- ML 모델 학습 및 저장 ---
+st.header("3. ML Model Training")
+st.markdown("---")
+
+# ML 학습 기간 UI
+col_ml_train_date1, col_ml_train_date2 = st.columns(2)
+with col_ml_train_date1:
+    ml_train_start_date = st.date_input("ML Model Training Start Date",
+                                         value=datetime.datetime.strptime(START_DATE, '%Y-%m-%d').date(),
+                                         max_value=end_date - datetime.timedelta(days=PREDICTION_HORIZON_DAYS * 2))
+with col_ml_train_date2:
+    default_end_date = end_date - datetime.timedelta(days=PREDICTION_HORIZON_DAYS)
+    min_allowed_date = ml_train_start_date + datetime.timedelta(days=PREDICTION_HORIZON_DAYS * 2)
+    if default_end_date < min_allowed_date:
+        default_end_date = min_allowed_date
+
+    ml_train_end_date = st.date_input("ML Model Training End Date",
+                                       value=default_end_date,
+                                       min_value=min_allowed_date)

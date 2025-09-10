@@ -13,10 +13,3 @@ setuptools>=65.5.0
 git+https://github.com/twopirllc/pandas-ta.git@0.3.14b0
 
 
-
-streamlit
-pandas
-yfinance
-pandas-ta
-numpy<2.0
-

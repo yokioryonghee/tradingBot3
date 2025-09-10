@@ -39,7 +39,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("Automated Quant Trading Backtesting System 📈")
+st.title("Short-term trading stratege")
 st.markdown("---")
 
 # --- 1. 파라미터 설정 (사이드바) ---

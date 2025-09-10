@@ -56,10 +56,10 @@ with col1_date:
 
 with col2_date:
     end_date = st.date_input(
-        "End Date",
-        value=datetime.datetime.strptime(DEFAULT_END_DATE, '%Y-%m-%d').date(),
-        max_value=datetime.date.today()
-    )
+    "End Date",
+    value=datetime.datetime.strptime(DEFAULT_END_DATE, '%Y-%m-%d').date()
+)
+
 
 # 종목 유니버스 설정
 st.sidebar.subheader("Stock Universe")

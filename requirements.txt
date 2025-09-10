@@ -1,7 +1,8 @@
 joblib
 lightgbm
 matplotlib
-numpy<1.24
+#numpy<1.24
+numpy>=1.24.0
 pandas
 scikit-learn
 streamlit
@@ -9,5 +10,12 @@ yfinance
 setuptools
 pandas_ta
 setuptools>=65.5.0
-pandas-ta==0.3.14b0
+pandas-ta
+
+
+streamlit
+pandas
+yfinance
+pandas-ta
+numpy<2.0
 

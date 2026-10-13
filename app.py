@@ -56,10 +56,13 @@ if st.button('2. Train ML models'):
         with st.spinner('Training chronological purged data'):
             metrics,_=train_and_evaluate_models_for_streamlit(frame.loc[frame.index<boundary].copy(),tickers,horizon,rise)
         st.session_state.ml_ready=True
+        st.session_state.trained_fraction=fraction
         st.json(metrics)
     except Exception as exc:
         st.session_state.pop('ml_ready',None)
         st.error(str(exc))
+if st.session_state.get('trained_fraction') not in (None,fraction):
+    st.session_state.pop('ml_ready',None)
 strategy=st.radio('Strategy',['Rules-Based','ML-Based'])
 if st.button('3. Run backtest'):
     try:

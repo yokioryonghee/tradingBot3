@@ -113,10 +113,65 @@ This tradingBot3 project represents my passion for combining quantitative analys
 
 ## 🚀 실행 방법
 
+이 명령은 **tradingBot3** 프로젝트용입니다. `quantitative-trading-engine` 폴더에서는 실행하지 마세요. `app.py`와 `requirements.txt`가 있는 저장소 최상위 폴더에서 실행해야 합니다. Python 3.11을 권장합니다.
+
+### macOS / Linux — 처음 설치
+
+아직 저장소가 없다면 다음 명령으로 내려받습니다.
+
 ```bash
-pip install -r requirements.txt
-streamlit run app.py
+cd ~
+git clone https://github.com/yokioryonghee/tradingBot3.git
+cd tradingBot3
 ```
+
+이미 내려받았다면 위 clone 명령 대신 기존 `tradingBot3` 폴더로 이동하세요.
+
+Python 3.11이 설치되어 있다면 다음을 실행합니다.
+
+```bash
+python3.11 -m venv .venv
+./.venv/bin/python -m pip install --upgrade pip
+./.venv/bin/python -m pip install -r requirements.txt
+./.venv/bin/python -m streamlit run app.py
+```
+
+**pyenv를 사용하는 경우:** 저장소의 `.python-version`에 적힌 환경 이름이 내 컴퓨터에 없을 수 있습니다. 위의 가상환경 생성 명령 대신 아래 두 줄을 실행한 후, 위의 설치·실행 명령 세 줄을 실행하세요.
+
+```bash
+pyenv install -s 3.11.8
+PYENV_VERSION=3.11.8 python -m venv .venv
+```
+
+### macOS / Linux — 다음부터 실행
+
+`tradingBot3` 폴더에서 다음 한 줄로 실행합니다. 가상환경 활성화는 필요하지 않습니다.
+
+```bash
+./.venv/bin/python -m streamlit run app.py
+```
+
+터미널에 표시되는 Local URL(기본값: http://localhost:8501)을 브라우저에서 엽니다. 종료는 터미널에서 `Ctrl+C`를 누릅니다.
+
+### Windows PowerShell
+
+Python 3.11 설치 후 `tradingBot3` 폴더에서 실행합니다.
+
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m streamlit run app.py
+```
+
+다음부터는 마지막 실행 명령만 사용합니다.
+
+### 실행 오류 확인
+
+- `pyenv: streamlit: command not found`: 위처럼 `./.venv/bin/python -m streamlit run app.py`로 실행하세요. 설치와 실행이 같은 Python을 사용합니다.
+- `No module named streamlit`: 프로젝트 폴더에서 `./.venv/bin/python -m pip install -r requirements.txt`를 다시 실행하세요.
+- `File does not exist: app.py`: 현재 폴더가 `tradingBot3`인지 확인하세요.
+- `Requirement already satisfied`: 패키지가 이미 설치되었다는 정상 메시지입니다.
 
 ## 📁 주요 파일 구조
 

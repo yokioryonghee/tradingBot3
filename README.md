@@ -12,11 +12,21 @@ Streamlit에서 조정주가를 내려받고 규칙 전략과 RF/LightGBM 분류
 
 ```bash
 cd ~
-git clone https://github.com/yokioryonghee/tradingBot3.git
+git clone --branch fix/reproducible-runtime-20261013 https://github.com/yokioryonghee/tradingBot3.git
 cd tradingBot3
 ```
 
-이미 내려받았다면 위 clone 명령 대신 기존 `tradingBot3` 폴더로 이동하세요.
+현재 실행 가능한 수정본은 `fix/reproducible-runtime-20261013` 브랜치에 있습니다. 기존 `main`에는 Python 3.11에서 설치되지 않는 `pandas_ta` 의존성이 남아 있으므로 아래 브랜치 전환이 필요합니다.
+
+이미 내려받았다면 기존 `tradingBot3` 폴더에서 다음을 실행하세요. 로컬 변경 때문에 전환이 거부되면 변경 내용을 보존한 뒤 진행하세요.
+
+```bash
+git fetch origin
+git switch fix/reproducible-runtime-20261013
+git pull --ff-only origin fix/reproducible-runtime-20261013
+```
+
+기존 Python 3.11 가상환경이 있다면 다시 생성할 필요 없이 아래 패키지 설치부터 진행합니다.
 
 Python 3.11이 설치되어 있다면 다음을 실행합니다.
 
@@ -60,6 +70,7 @@ py -3.11 -m venv .venv
 ### 실행 오류 확인
 
 - `pyenv: streamlit: command not found`: 위처럼 `./.venv/bin/python -m streamlit run app.py`로 실행하세요. 설치와 실행이 같은 Python을 사용합니다.
+- `No matching distribution found for pandas_ta`: 위의 수정 브랜치로 전환한 뒤 설치 명령을 다시 실행하세요. 수정본은 `pandas_ta` 없이 지표를 계산합니다.
 - `No module named streamlit`: 프로젝트 폴더에서 `./.venv/bin/python -m pip install -r requirements.txt`를 다시 실행하세요.
 - `File does not exist: app.py`: 현재 폴더가 `tradingBot3`인지 확인하세요.
 - `Requirement already satisfied`: 패키지가 이미 설치되었다는 정상 메시지입니다.
